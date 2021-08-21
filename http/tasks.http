@@ -1,11 +1,35 @@
-### Invocar al servidor en mi maquina: localhost
+### Invoke Servidor
 GET http://localhost:3000/
 
-### Crear una nueva tarea
+### Get all of tasks
+GET http://localhost:3000/tasks
+
+### Get a task by ID
+GET http://localhost:3000/tasks/2
+
+### Create a task
 POST http://localhost:3000/tasks
-Content-Type: "application/json"
+Content-Type: application/json
 
 {
-    "title": "Tarea 1",
-    "detail": "Detalle de la tarea 1"
+    "title": "Completar primera evaluacion",
+    "detail": "Instalar Sakila y practicar consultas"
 }
+
+### Update a Task
+PUT http://localhost:3000/tasks/1
+Content-Type: application/json
+
+{
+    "title": "Task Updated",
+    "detail": "Detail Updated"
+}
+
+### Delete a Task
+DELETE http://localhost:3000/tasks/2
+
+### Status change to Completed
+PUT http://localhost:3000/tasks/1?status=COMPLETED
+
+### Status change to pending
+PUT http://localhost:3000/tasks/1?status=PENDING
