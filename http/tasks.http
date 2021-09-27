@@ -1,14 +1,22 @@
 ### Invoke Servidor
 GET http://localhost:3000/
 
-### Get all of tasks
+### Get all of tasks Tefisita
 GET http://localhost:3000/tasks
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoic3NhdmVkcmEiLCJleHAiOjE2MzI3MjU3MTYsImlhdCI6MTYzMjcyMjExNn0.6I8h5kjTz3ygpAEA43eZ3wPYQrgqFOHltfRez7C8U4g
+
+### Get all of tasks Nachita
+GET http://localhost:3000/tasks
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoieXBheiIsImV4cCI6MTYzMjcyNjg1NSwiaWF0IjoxNjMyNzIzMjU1fQ.64x1wotaM4Hq3CyTXCVBhcyV5EguVk4Dl_v-ZtjyfbY
+
 
 ### Get a task by ID
 GET http://localhost:3000/tasks/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoieXBheiIsImV4cCI6MTYzMjcyNjg1NSwiaWF0IjoxNjMyNzIzMjU1fQ.64x1wotaM4Hq3CyTXCVBhcyV5EguVk4Dl_v-ZtjyfbY
 
 ### Create a task
 POST http://localhost:3000/tasks
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoieXBheiIsImV4cCI6MTYzMjcyNjg1NSwiaWF0IjoxNjMyNzIzMjU1fQ.64x1wotaM4Hq3CyTXCVBhcyV5EguVk4Dl_v-ZtjyfbY
 Content-Type: application/json
 
 {
@@ -18,6 +26,7 @@ Content-Type: application/json
 
 ### Update a Task
 PUT http://localhost:3000/tasks/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoieXBheiIsImV4cCI6MTYzMjcyNjg1NSwiaWF0IjoxNjMyNzIzMjU1fQ.64x1wotaM4Hq3CyTXCVBhcyV5EguVk4Dl_v-ZtjyfbY
 Content-Type: application/json
 
 {
@@ -27,9 +36,42 @@ Content-Type: application/json
 
 ### Delete a Task
 DELETE http://localhost:3000/tasks/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoieXBheiIsImV4cCI6MTYzMjcyNjg1NSwiaWF0IjoxNjMyNzIzMjU1fQ.64x1wotaM4Hq3CyTXCVBhcyV5EguVk4Dl_v-ZtjyfbY
+
 
 ### Status change to Completed
 PUT http://localhost:3000/tasks/1?status=COMPLETED
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoieXBheiIsImV4cCI6MTYzMjcyNjg1NSwiaWF0IjoxNjMyNzIzMjU1fQ.64x1wotaM4Hq3CyTXCVBhcyV5EguVk4Dl_v-ZtjyfbY
+
 
 ### Status change to pending
 PUT http://localhost:3000/tasks/1?status=PENDING
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoieXBheiIsImV4cCI6MTYzMjcyNjg1NSwiaWF0IjoxNjMyNzIzMjU1fQ.64x1wotaM4Hq3CyTXCVBhcyV5EguVk4Dl_v-ZtjyfbY
+
+
+###Login
+GET http://localhost:3000/login?username=jperez&password=123456
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoieXBheiIsImV4cCI6MTYzMjcyNjg1NSwiaWF0IjoxNjMyNzIzMjU1fQ.64x1wotaM4Hq3CyTXCVBhcyV5EguVk4Dl_v-ZtjyfbY
+
+
+### Authentication
+POST http://localhost:3000/auth
+Content-Type: application/json
+
+{
+    "username": "ypaz",
+    "password": "12345678"
+}
+
+### Create User
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "username": "ypaz",
+    "password": "12345678"
+}
+
+### Invocar a la raiz
+GET http://localhost:3000/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInVzZXJuYW1lIjoianBlcmV6IiwiaWF0IjoxNjMxODQxODU2fQ.UmBBON528-oJ1LQwDyWVCWl6oUR2CCT9AVNnKOmv6
