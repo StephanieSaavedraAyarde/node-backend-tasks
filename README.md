@@ -1,5 +1,5 @@
 # Task Manager | Backend
-El proyecto desarrollado es un sistema de gestión de tareas, donde se tendrá los siguientes elementos:
+El proyecto desarrollado es un sistema de gestión de tareas, donde se tiene los siguientes elementos:
 - Listado de tareas
 - Opción a crear nuevas tareas
 - Opción a editar tareas
